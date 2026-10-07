@@ -1,15 +1,15 @@
 <div align="center">
   
-# PhoneSploit Pro
+# Tahad Pro
   
-### PhoneSploit with Metasploit integration.
+### Tahad Pro — Android ADB Toolkit with Metasploit integration.
 
 An all-in-one hacking tool written in `Python` to remotely exploit Android devices using `ADB` (Android Debug Bridge) and `Metasploit-Framework`.
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/AzeemIdrisi/PhoneSploit-Pro)
+![GitHub release (latest by date)](https://img.shields.io/badge/project-Tahad%20Pro)
 ![Python](https://img.shields.io/badge/python-v3.10%2B-blue)
-![GitHub Repo stars](https://img.shields.io/github/stars/AzeemIdrisi/PhoneSploit-Pro?style=social)
-![GitHub forks](https://img.shields.io/github/forks/AzeemIdrisi/PhoneSploit-Pro?style=social)
+![GitHub Repo stars](https://img.shields.io/badge/maintainer-Tahajjud%20Mithun)
+![Project](https://img.shields.io/badge/project-Tahad%20Pro)
 
 </div>
 
@@ -35,10 +35,10 @@ An all-in-one hacking tool written in `Python` to remotely exploit Android devic
 
 This tool can automatically __create__, __install__, and __run__ a payload on the target device using __Metasploit-Framework__ and __ADB__ to take full control of the Android device in one click if the device has an open ADB port on `TCP 5555`.
 
-The goal of this project is to make penetration testing and vulnerability assessment on Android devices easy. You no longer need to memorize commands and arguments—PhoneSploit Pro does it for you. Using this tool, you can test the security of your Android devices easily.
+The goal of this project is to make penetration testing and vulnerability assessment on Android devices easy. You no longer need to memorize commands and arguments—Tahad Pro does it for you. Using this tool, you can test the security of your Android devices easily.
 
 > [!TIP]
-> __PhoneSploit Pro__ can also be used as a complete ADB toolkit to perform various operations on Android devices over Wi‑Fi as well as USB.
+> __Tahad Pro__ can also be used as a complete ADB toolkit to perform various operations on Android devices over Wi‑Fi as well as USB.
 
 ---
 
@@ -133,10 +133,10 @@ The goal of this project is to make penetration testing and vulnerability assess
 
 ## Getting started
 
-__PhoneSploit Pro__ does not need installation and runs directly with `python3`.
+__Tahad Pro__ does not need installation and runs directly with `python3`.
 
 > [!IMPORTANT]
-> **PhoneSploit Pro** requires Python version __3.10 or higher__. Please update Python before running the program.
+> **Tahad Pro** requires Python version __3.10 or higher__. Please update Python before running the program.
 
 ### Linux and macOS
 
@@ -145,16 +145,16 @@ Make sure all [required](#requirements) software is installed.
 Open a terminal and run the following commands:
 
 ```
-git clone https://github.com/AzeemIdrisi/PhoneSploit-Pro.git
+git clone https://github.com/<YOUR-GITHUB-USERNAME>/TahadPro.git
 ```
 ```
-cd PhoneSploit-Pro/
+cd TahadPro/
 ```
 ```
 pip install -r requirements.txt
 ```
 ```
-python3 phonesploitpro.py
+python3 tahadpro.py
 ```
 
 ### Windows
@@ -164,10 +164,10 @@ Make sure all [required](#requirements) software is installed.
 Open a terminal and run the following commands:
 
 ```
-git clone https://github.com/AzeemIdrisi/PhoneSploit-Pro.git
+git clone https://github.com/<YOUR-GITHUB-USERNAME>/TahadPro.git
 ```
 ```
-cd PhoneSploit-Pro/
+cd TahadPro/
 ```
 ```
 pip install -r requirements.txt
@@ -175,10 +175,10 @@ pip install -r requirements.txt
 
 1. Download and extract the latest `platform-tools` from [here](https://developer.android.com/studio/releases/platform-tools.html#downloads).
 
-2. Copy all files from the extracted `platform-tools` or `adb` directory into the __PhoneSploit-Pro__ directory, then run:
+2. Copy all files from the extracted `platform-tools` or `adb` directory into the __Tahad Pro__ directory, then run:
 
 ```
-python phonesploitpro.py
+python tahadpro.py
 ```
 
 ---
@@ -219,12 +219,12 @@ adb tcpip 5555
 7. You can now connect the Android phone to the computer over Wi‑Fi using `adb`.
 8. Disconnect the USB cable.
 9. Go to `Settings` > `About Phone` > `Status` > `IP address` and note the phone’s `IP address`.
-10. Run __PhoneSploit Pro__, choose `Connect a device`, and enter the target’s `IP address` to connect over Wi‑Fi.
+10. Run __Tahad Pro__, choose `Connect a device`, and enter the target’s `IP address` to connect over Wi‑Fi.
 
 ### Connecting the Android phone the next time
 
 1. Connect your Android device and host computer to the same Wi‑Fi network.
-2. Run __PhoneSploit Pro__, choose `Connect a device`, and enter the target’s `IP address` to connect over Wi‑Fi.
+2. Run __Tahad Pro__, choose `Connect a device`, and enter the target’s `IP address` to connect over Wi‑Fi.
 
 ---
 
@@ -242,7 +242,7 @@ This tool is tested on:
 -  ✅ Termux (Android)
 
 > [!NOTE]
-> New features are primarily tested on **Linux**, so **Linux** is recommended for running PhoneSploit Pro.
+> New features are primarily tested on **Linux**, so **Linux** is recommended for running Tahad Pro.
 Some features might not work properly on Windows.
 
 ---
@@ -324,7 +324,7 @@ Or see: [Windows: antivirus and installers](https://docs.metasploit.com/docs/usi
 
 Visit the `scrcpy` GitHub page for the latest installation instructions: [scrcpy — get the app](https://github.com/Genymobile/scrcpy#get-the-app)
 
-**On Windows**: Copy all files from the extracted **scrcpy** folder into the **PhoneSploit-Pro** folder.
+**On Windows**: Copy all files from the extracted **scrcpy** folder into the **TahadPro** folder.
 
 > [!IMPORTANT]  
 > If `scrcpy` is not available for your Linux distribution (for example **Kali Linux**), you can install it manually ([Linux guide](https://github.com/Genymobile/scrcpy/blob/master/doc/linux.md))
@@ -394,24 +394,15 @@ pkg install nmap
 
 ## Developer
 
-<a href="https://github.com/azeemidrisi/">
-<!--   <img src="https://contrib.rocks/image?repo=azeemidrisi/phonesploit-pro" /> -->
- <img width="150px" src=https://github.com/AzeemIdrisi/PhoneSploit-Pro/assets/112647789/a5fa646c-93a2-460f-bcb7-528fedb147e9 />
+**Tahajjud Mithun**
 
-</a>
-
-
-**Azeem Idrisi** - [@AzeemIdrisi](https://github.com/azeemidrisi/)
- 
+Tahad Pro is a branded derivative inspired by the original PhoneSploit-Pro project by **Azeem Idrisi**. Upstream attribution and licensing information are retained where applicable.
 
 ## Support
 
-If you like my work, you can support me via:
+For project feedback and contributions, use your own TahadPro GitHub repository.
 
-<a href="https://paypal.me/AzeemIdrisi" target="_blank"> <kbd> <img
-        src="https://github.com/AzeemIdrisi/AzeemIdrisi/blob/main/docs/paypal-button-blue.png" alt="PayPal"
-        width="147"></a> <a href="https://www.buymeacoffee.com/AzeemIdrisi" target="_blank"> <kbd> <img src="https://github.com/AzeemIdrisi/AzeemIdrisi/blob/main/docs/default-yellow.png" alt="Buy Me A Coffee" width="200"></a>
 
 <hr>
 
-Copyright © 2026 Azeem Idrisi (github.com/AzeemIdrisi)
+Tahad Pro © 2026 Tahajjud Mithun — upstream attribution retained in accordance with the applicable license

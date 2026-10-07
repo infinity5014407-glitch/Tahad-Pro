@@ -18,7 +18,7 @@ from modules.console import (
 
 def _list_third_party_apps() -> list[str]:
     """Return list of third-party package names."""
-    raw = adb_output(["shell", "pm", "list", "packages", "-3"])
+    raw = adb_output(["shell", "pm", "list", "packages", "-3", "--user", "0"])
     return [line.replace("package:", "").strip() for line in raw.splitlines() if line.strip()]
 
 
@@ -152,7 +152,7 @@ def list_apps(config: AppConfig) -> None:
         title = "Third-Party Apps"
     elif mode == "2":
         with task_status("[info]Fetching all packages…[/info]"):
-            raw = adb_output(["shell", "pm", "list", "packages"])
+            raw = adb_output(["shell", "pm", "list", "packages", "--user", "0"])
             app_list = [line.replace("package:", "").strip() for line in raw.splitlines() if line.strip()]
         title = "All Installed Packages"
     else:

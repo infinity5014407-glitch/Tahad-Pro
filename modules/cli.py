@@ -2,9 +2,12 @@ import os
 import platform
 import random
 import subprocess
+import time
 from pathlib import Path
 
+from rich.live import Live
 from rich.panel import Panel
+from rich.text import Text
 
 from modules import banner, color
 from modules.config import AppConfig
@@ -61,7 +64,7 @@ def check_packages(config: AppConfig) -> None:
     )
 
     choice = console.input(
-        "\n[green]Do you still want to continue to PhoneSploit Pro?[/green]     [bold]Y / N[/bold] > "
+        "\n[green]Do you still want to continue to Tahad Pro?[/green]     [bold]Y / N[/bold] > "
     ).lower()
     while choice not in ("y", "n", ""):
         choice = console.input("[red]Invalid choice![/red] Press Y or N > ").lower()
@@ -87,7 +90,40 @@ _selected_banner: str = ""
 
 def _pick_banner() -> str:
     c = random.choice(color.color_list)
-    return f"[bold {c}]{random.choice(banner.banner_list)}[/bold {c}]"
+    return random.choice(banner.banner_list)
+
+
+def _startup_banner_animation() -> None:
+    """Show a short large lightning/burning intro without adding dependencies."""
+    art = (
+        "   ████████╗ █████╗ ██╗  ██╗ █████╗ ██████╗   ██████╗ ██████╗  ██████╗\n"
+        "   ╚══██╔══╝██╔══██╗██║  ██║██╔══██╗██╔══██╗ ██╔═══██╗██╔══██╗██╔═══██╗\n"
+        "      ██║   ███████║███████║███████║██║  ██║ ██║   ██║██████╔╝██║   ██║\n"
+        "      ██║   ██╔══██║██╔══██║██╔══██║██║  ██║ ██║   ██║██╔═══╝ ██║   ██║\n"
+        "      ██║   ██║  ██║██║  ██║██║  ██║██████╔╝ ╚██████╔╝██║     ╚██████╔╝\n"
+        "      ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝   ╚═════╝ ╚═╝      ╚═════╝ \n"
+    )
+    lightning = [
+        "⚡ ·  · ⚡ ·  · ⚡",
+        "· ⚡ · ⚡ · ⚡ ·",
+        "⚡ ⚡ ·  · ⚡ ⚡",
+        "· ⚡ ⚡ · ⚡ · ⚡",
+        "⚡ · ⚡ ⚡ · ⚡",
+        "· · ⚡ · ⚡ ⚡ ·",
+    ]
+    styles = ["bold cyan", "bold white", "bold bright_cyan", "bold yellow", "bold cyan", "bold white"]
+    with Live(console=console, refresh_per_second=12, transient=True) as live:
+        for i in range(len(lightning) + 2):
+            spark = lightning[i % len(lightning)]
+            style = styles[i % len(styles)]
+            frame = Text()
+            frame.append("\n")
+            frame.append("      " + spark + "\n", style="bold yellow")
+            frame.append(art, style=style)
+            frame.append("      " + spark + "\n", style="bold yellow")
+            frame.append("                 v2.0  •  By Tahajjud Mithun", style="bold white")
+            live.update(frame)
+            time.sleep(0.11)
 
 
 def display_menu(config: AppConfig) -> None:
@@ -115,11 +151,11 @@ def change_page(config: AppConfig, direction: str) -> None:
 
 def update_me(config: AppConfig) -> None:
     if not confirm(
-        "Run [cyan]git fetch[/cyan] and [cyan]git rebase[/cyan] to update PhoneSploit-Pro? "
+        "Run [cyan]git fetch[/cyan] and [cyan]git rebase[/cyan] to update Tahad Pro? "
         "Uncommitted local changes may conflict or be lost."
     ):
         return
-    console.print("[yellow]Updating PhoneSploit-Pro...[/yellow]")
+    console.print("[yellow]Updating Tahad Pro...[/yellow]")
     console.print("[green]Fetching latest updates from GitHub...[/green]")
     fetch = subprocess.run(
         ["git", "fetch"],
@@ -147,7 +183,7 @@ def update_me(config: AppConfig) -> None:
         )
         return
 
-    console.print("[cyan]Please restart PhoneSploit-Pro.[/cyan]")
+    console.print("[cyan]Please restart Tahad Pro.[/cyan]")
     config.run = False
 
 
@@ -441,6 +477,7 @@ def run() -> None:
 
     _selected_banner = _pick_banner()
     connection.prompt_select_device_if_multiple(config)
+    _startup_banner_animation()
     clear_screen(config)
 
     while config.run:

@@ -1,9 +1,12 @@
 """
-    COPYRIGHT DISCLAIMER
+    COPYRIGHT / ATTRIBUTION
 
-    Script : PhoneSploit Pro - All in One Android Hacking ADB Toolkit
+    Project : Tahad Pro - Android ADB Toolkit
+    Created/maintained by Tahajjud Mithun
+    Inspired by PhoneSploit-Pro by Azeem Idrisi
 
-    Copyright (C) 2026  Azeem Idrisi (github.com/AzeemIdrisi)
+    Original copyright (C) 2026 Azeem Idrisi (github.com/AzeemIdrisi)
+    Project branding/derivative attribution: Tahajjud Mithun
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -19,10 +22,10 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
     Forking and modifying are allowed, but credit must be given to the
-    original developer, [Azeem Idrisi (github.com/AzeemIdrisi)], and copying the code
-    is not permitted without permission.
+    original developer, [Azeem Idrisi (github.com/AzeemIdrisi)]. This project is a branded derivative/inspired version;
+    retain all applicable upstream license and attribution requirements.
 
-    For any queries, Contact me at : azeemidrisiofficial@gmail.com
+    For project queries, see the Tahad Pro repository.
 """
 
 version = "v2.0"
@@ -34,7 +37,7 @@ menu1 = """
     [white]4. [green]Scan Network for Devices     [white]9. [green]Send File/Folder to Device           [white]14. [green]Access Device Shell
     [white]5. [green]Mirror & Control Device     [white]10. [green]Run an App                           [white]15. [green]Hack Device [red](Using Metasploit)[/red]
 
-  [yellow]N: Next Page                                      (Page : 1 / 5)[/yellow]"""
+  [yellow]N: Next Page                                      (Tahad Pro • Page : 1 / 5)[/yellow]"""
 
 menu2 = """
     [white]16. [green]List All Folders/Files      [white]21. [green]Anonymous Screenshot                [white]26. [green]Play a Video on Device
@@ -43,7 +46,7 @@ menu2 = """
     [white]19. [green]Copy All Screenshots        [white]24. [green]Display a Photo on Device           [white]29. [green]Restart Device
     [white]20. [green]Copy All Camera Photos      [white]25. [green]Play an Audio on Device             [white]30. [green]Advanced Reboot Options
 
-  [yellow]P: Previous Page         N: Next Page            (Page : 2 / 5)[/yellow]"""
+  [yellow]P: Previous Page         N: Next Page            (Tahad Pro • Page : 2 / 5)[/yellow]"""
 
 menu3 = """
     [white]31. [green]Unlock Device               [white]36. [green]Extract APK from Installed App      [white]41. [green]Record Mic Audio
@@ -52,7 +55,7 @@ menu3 = """
     [white]34. [green]Dump All Contacts           [white]39. [green]Use Keycodes (Control Device)       [white]44. [green]TCP Port Forward / Reverse
     [white]35. [green]Dump Call Logs              [white]40. [green]Listen Mic Audio                    [white]45. [green]Force Stop App
 
-  [yellow]P: Previous Page         N: Next Page            (Page : 3 / 5)[/yellow]"""
+  [yellow]P: Previous Page         N: Next Page            (Tahad Pro • Page : 3 / 5)[/yellow]"""
 
 menu4 = """
     [white]46. [green]Clear App Data                 [white]51. [green]Network Snapshot               [white]56. [green]WiFi Status Dump
@@ -61,12 +64,12 @@ menu4 = """
     [white]49. [green]Restart App                    [white]54. [green]Read Locale                    [white]59. [green]Ping Connectivity
     [white]50. [green]Live Logcat Stream             [white]55. [green]Screen Stay-On                 [white]60. [green]Saved WiFi Networks
 
-  [yellow]P: Previous Page         N: Next Page            (Page : 4 / 5)[/yellow]"""
+  [yellow]P: Previous Page         N: Next Page            (Tahad Pro • Page : 4 / 5)[/yellow]"""
 
 menu5 = """
-    [white]61. [green]Root Heuristics                [white]62. [green]Update PhoneSploit-Pro
+    [white]61. [green]Root Heuristics                [white]62. [green]Update Tahad Pro
 
-  [yellow]P: Previous Page                                  (Page : 5 / 5)[/yellow]"""
+  [yellow]P: Previous Page                                  (Tahad Pro • Page : 5 / 5)[/yellow]"""
 
 menu = [menu1, menu2, menu3, menu4, menu5]
 
@@ -89,93 +92,29 @@ Use 'Ctrl + C' to stop at any point
 
     [green]msf6 > [yellow]exit -y       [/yellow][/green]
 
-[red]\\[PhoneSploit Pro][/red]   Press 'Enter' to continue attack / '0' to Go Back to Main Menu
+[red]\\[Tahad Pro][/red]   Press 'Enter' to continue attack / '0' to Go Back to Main Menu
     """
 
-banner2 = """
-        ░█▀▀█ █──█ █▀▀█ █▀▀▄ █▀▀ ░█▀▀▀█ █▀▀█ █── █▀▀█ ─▀─ ▀▀█▀▀ 　 ░█▀▀█ █▀▀█ █▀▀█
-        ░█▄▄█ █▀▀█ █──█ █──█ █▀▀ ─▀▀▀▄▄ █──█ █── █──█ ▀█▀ ──█── 　 ░█▄▄█ █▄▄▀ █──█
-        ░█─── ▀──▀ ▀▀▀▀ ▀──▀ ▀▀▀ ░█▄▄▄█ █▀▀▀ ▀▀▀ ▀▀▀▀ ▀▀▀ ──▀── 　 ░█─── ▀─▀▀ ▀▀▀▀
+large_banner = """
+[bold cyan]
+ _____  _    _   _    _    ____    ____  ____   ___
+|_   _|/ \  | | | |  / \  |  _ \  |  _ \|  _ \ / _ \
+  | | / _ \ | |_| | / _ \ | | | | | |_) | |_) | | | |
+  | |/ ___ \|  _  |/ ___ \| |_| | |  __/|  _ <| |_| |
+  |_/_/   \_\_| |_/_/   \_\____/  |_|   |_| \_\\___/
+[/bold cyan]
 
-
-            [red]{version}[/red]            [white]By github.com/AzeemIdrisi[/white]
+            [red]{version}[/red]    [white]By Tahajjud Mithun[/white]
 """.format(version=version)
 
-banner3 = """
-        █▀█ █░█ █▀█ █▄░█ █▀▀ █▀ █▀█ █░░ █▀█ █ ▀█▀   █▀█ █▀█ █▀█
-        █▀▀ █▀█ █▄█ █░▀█ ██▄ ▄█ █▀▀ █▄▄ █▄█ █ ░█░   █▀▀ █▀▄ █▄█
-
-
-            [red]{version}[/red]             [white]By github.com/AzeemIdrisi[/white]
-""".format(version=version)
-
-banner4 = """
-    _________.__                           _________      .__         .__  __    __________
-    \\______  \\  |__   ____   ____  ____  /   _____/_____ |  |   ____ |__|/  |_  \\______   \\_______  ____
-    |     ___/  |  \\ /  _ \\ /    \\_/ __ \\ \\_____  \\\\____ \\|  |  /  _ \\|  \\   __\\  |     ___/\\_  __ \\/  _ \\
-    |    |   |   Y  (  <_> )   |  \\  ___/ /        \\  |_> >  |_(  <_> )  ||  |    |    |     |  | \\(  <_> )
-    |____|   |___|  /\\____/|___|  /\\___  >_______  /   __/|____/\\____/|__||__|    |____|     |__|   \\____/
-                  \\/            \\/     \\/        \\/ |__|
-
-
-        [red]{version}[/red]                             [white]By github.com/AzeemIdrisi[/white]
-""".format(version=version)
-
-banner5 = """
-       ___  __                 ____     __     _ __     ___
-      / _ \\/ /  ___  ___  ___ / __/__  / /__  (_) /_   / _ \\_______ 
-     / ___/ _ \\/ _ \\/ _ \\/ -_)\\ \\/ _ \\/ / _ \\/ / __/  / ___/ __/ _ \\
-    /_/  /_//_/\\___/_//_/\\__/___/ .__/_/\\___/_/\\__/  /_/  /_/  \\___/
-                               /_/
-
-        [red]{version}[/red]        [white]By github.com/AzeemIdrisi[/white]
-""".format(version=version)
-
-banner6 = """
-        ____  __                    _____       __      _ __       ____
-       / __ \\/ /_  ____  ____  ___ / ___/____  / /___  (_) /_     / __ \\___________
-      / /_/ / __ \\/ __ \\/ __ \\/ _ \\\\__ \\/ __ \\/ / __ \\/ / __/    / /_/ / ___/ __ \\
-     / ____/ / / / /_/ / / / /  __/__/ / /_/ / / /_/ / / /_     / ____/ /  / /_/ /
-    /_/   /_/ /_/\\____/_/ /_/\\___/____/ .___/_/\\____/_/\\__/    /_/   /_/   \\____/
-                                     /_/
-
-           [red]{version}[/red]               [white]By github.com/AzeemIdrisi[/white]
-""".format(version=version)
-
-banner10 = """
-     ____    __                              ____            ___               __        ____
-    /\\  _`\\ /\\ \\                            /\\  _`\\         /\\_ \\           __/\\ \\__    /\\  _`\\
-    \\ \\ \\L\\ \\ \\ \\___     ___     ___      __\\ \\,\\L\\_\\  _____\\//\\ \\     ___ /\\_\\ \\ ,_\\   \\ \\ \\L\\ \\_ __   ___
-     \\ \\ ,__/\\ \\  _ `\\  / __`\\ /' _ `\\  /'__`\\/_\\__ \\ /\\ '__`\\\\\\ \\ \\   / __`\\/\\ \\ \\ \\/    \\ \\ ,__/\\`'__\\/ __`\\
-      \\ \\ \\/  \\ \\ \\ \\ \\/\\ \\L\\ \\/\\ \\/\\ \\/\\  __/ /\\ \\L\\ \\ \\ \\L\\ \\\\_\\ \\_/\\ \\L\\ \\ \\ \\ \\ \\_    \\ \\ \\/\\ \\ \\//\\ \\L\\ \\
-       \\ \\_\\   \\ \\_\\ \\_\\ \\____/\\ \\_\\ \\_\\ \\____\\\\ `\\____\\ \\ ,__//\\____\\ \\____/\\ \\_\\ \\__\\    \\ \\_\\ \\ \\_\\\\ \\____/
-        \\/_/    \\/_/\\/_/\\/___/  \\/_/\\/_/\\/____/ \\/_____/\\ \\ \\/ \\/____/\\/___/  \\/_/\\/__/     \\/_/  \\/_/ \\/___/
-                                                         \\ \\_\\
-                                                          \\/_/
-
-            [red]{version}[/red]                                [white]By github.com/AzeemIdrisi[/white]
-""".format(version=version)
-
-banner11 = """
-    _____________                   ________       ______     __________       ________
-    ___  __ \\__  /_____________________  ___/__________  /________(_)_  /_      ___  __ \\____________
-    __  /_/ /_  __ \\  __ \\_  __ \\  _ \\____ \\___  __ \\_  /_  __ \\_  /_  __/      __  /_/ /_  ___/  __ \\
-    _  ____/_  / / / /_/ /  / / /  __/___/ /__  /_/ /  / / /_/ /  / / /_        _  ____/_  /   / /_/ /
-    /_/     /_/ /_/\\____//_/ /_/\\___//____/ _  .___//_/  \\____//_/  \\__/        /_/     /_/    \\____/
-                                            /_/
-
-
-            [red]{version}[/red]                            [white]By github.com/AzeemIdrisi[/white]
-""".format(version=version)
-
-banner12 = """
-        ▒█▀▀█ █░░█ █▀▀█ █▀▀▄ █▀▀ ▒█▀▀▀█ █▀▀█ █░░ █▀▀█ ░▀░ ▀▀█▀▀ 　 ▒█▀▀█ █▀▀█ █▀▀█
-        ▒█▄▄█ █▀▀█ █░░█ █░░█ █▀▀ ░▀▀▀▄▄ █░░█ █░░ █░░█ ▀█▀ ░░█░░ 　 ▒█▄▄█ █▄▄▀ █░░█
-        ▒█░░░ ▀░░▀ ▀▀▀▀ ▀░░▀ ▀▀▀ ▒█▄▄▄█ █▀▀▀ ▀▀▀ ▀▀▀▀ ▀▀▀ ░░▀░░ 　 ▒█░░░ ▀░▀▀ ▀▀▀▀
-
-
-            [red]{version}[/red]                            [white]By github.com/AzeemIdrisi[/white]
-""".format(version=version)
+banner2 = large_banner
+banner3 = large_banner
+banner4 = large_banner
+banner5 = large_banner
+banner6 = large_banner
+banner10 = large_banner
+banner11 = large_banner
+banner12 = large_banner
 
 banner_list = [
     banner2,

@@ -6,3 +6,10 @@ test.py
 hidden.txt
 .vscode/
 .cursor/
+# Local backups / runtime artifacts
+*.branding-backup
+*.apps-backup
+*.banner2-backup
+*.banner-spelling-backup
+*.tahad-pro-spelling-backup
+*.html
