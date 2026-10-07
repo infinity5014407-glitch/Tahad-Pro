@@ -42,12 +42,37 @@ The goal of this project is to make penetration testing and vulnerability assess
 
 ---
 
-## Screenshots
+## Tahad Pro in Action
 
-![Screenshot Page 1](docs/Screenshot-1.png)
-![Screenshot Page 2](docs/Screenshot-2.png)
-![Screenshot Page 3](docs/Screenshot-3.png)
-![Screenshot Page 4](docs/Screenshot-4.png)
+```text
+┌──────────────────────────────────────────────────────────────┐
+│                     ⚡ TAHAD PRO ⚡                          │
+│                  By Tahajjud Mithun                         │
+├──────────────────────────────────────────────────────────────┤
+│ [Main Menu] > 13                                             │
+│                                                              │
+│  Tahad Pro • Android ADB Toolkit                            │
+│                                                              │
+│  ✓ Device connected                                          │
+│  ✓ ADB ready                                                 │
+│  ✓ Installed apps detected                                  │
+│                                                              │
+│ [Tahad Pro] > _                                             │
+└──────────────────────────────────────────────────────────────┘
+```
+
+```text
+$ cd TahadPro
+$ source venv/bin/activate
+$ python tahadpro.py
+
+              TAHAD PRO
+          v2.0 • Tahajjud Mithun
+
+[Main Menu] > _
+```
+
+The examples above represent the current Tahad Pro terminal experience and are intentionally text-based so the project documentation does not depend on screenshots from the upstream project.
 
 ---
 
